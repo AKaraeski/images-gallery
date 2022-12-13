@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #FFF;
+    font-family: Poppins;
+    perspective: 1000px;
+}
+svg {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.navbar-brand {
+    font-family: Kenia;
+}
+.gallary-container {
+    height: 521px;
+}
+.gallary {
+    width: 270px;
+    height: 420px;
+    transform-style: preserve-3d;
+}
+.box-img {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.box-img .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    transition: transform 0.6s;
+    border: 3px solid #FFF;
+}
+.box-img .image img {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    border: 0;
+    background: transparent;
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: serif;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+.prev {
+    left: 0;
+    transform: translate(-130%, -50%);
+}
+.next {
+    right: 0;
+    transform: translate(130%, -50%);
+}
+.btn .circle {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.btn:hover .circle {
+    background: #FFF;
+}
+.my-pagination {
+    height: 125px;
+    width: 2px;
+    background: #777;
+}
+.carousel-pag {
+    height: 24px;
+}
+.my-pagination .stroke {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    width: 3px;
+    background: #FFF;
+    border-radius: inherit;
+    transition: height 0.4s;
+}
+.layout-box {
+    writing-mode: vertical-lr;
+    border: 1px solid #FFF;
+}
+.layout-box .layout-type {
+    border-radius: inherit;
+}
+.layout-box .layout-type.active {
+    background-color: #FFF;
+    color: #222;
+}
+.carousel-names {
+    height: 105px;
+}
+.inner-carousel {
+    transition: transform 0.6s ease-in-out;
+}
+.carousel-names h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5.47em;
+    font-family: Anton;
+    color: #FFF7;
+    margin: 0;
+}
+
+/* js classes */
+.turned {
+    transform: translateX(100%) rotateZ(23deg) !important;
+}
+
+#bgColor {
+    transition: 0.5s;
+}
